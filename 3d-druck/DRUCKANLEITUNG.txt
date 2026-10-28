@@ -1,0 +1,73 @@
+VENTILATOR – VARIANTE B (Aufgabenstellung)
+Alle STL-Koordinaten in MILLIMETERN. Beim Import NICHT automatisch vergroessern.
+
+DREI DRUCKTEILE
+1. Motorhalter-B.stl: Halter, Standfuss, Motorhuelse und hinteres Gitter integriert.
+2. Propeller-B.stl: drei um 120 Grad versetzte, geschwungene und um 18 Grad
+   angestellte Fluegel; Blattlaenge etwa 33 mm; Nabe mit 2,0-mm-Durchgangsloch.
+3. Schutzgitter-B.stl: abnehmbare vordere Abdeckung mit konzentrischer Versteifung.
+
+MOTOR UND PASSUNGEN
+Ausgelegt auf Gehaeuse-Durchmesser 20 mm, Gehaeuselaenge 25 mm, Welle 2 mm.
+Das sind die Masse aus der AUFGABENSTELLUNG, nicht die abweichenden Daten oben.
+Motoraufnahme: 20,2 mm Grundbohrung; drei kleine Anpassrippen verengen lokal
+auf ca. 19,8 mm. Diese bei Bedarf vorsichtig nacharbeiten, bis der Motor satt
+sitzt. Kabel durch die beiden Aussparungen an der Rueckseite fuehren. Nicht
+mit Gewalt einsetzen. Die geschlitzte Huelse erlaubt etwas Nachgiebigkeit.
+Gitterflansch: 92,0 mm Aussendurchmesser, Gegenstueck 92,2 mm Innendurchmesser.
+Das ergibt +0,2 mm DIAMETRALES Spiel. Realer Halt haengt vom Drucker ab.
+Wellenbohrung ist bewusst 2,0 mm Nennmass als Steck-/Presspassung, nicht 2,2 mm:
+Sie muss Drehmoment uebertragen. Nur schrittweise nachreiben, wenn zu eng;
+bei lockerer Passung nicht betreiben. Auf keinen Fall auf die Motorwelle haemmern.
+Der Motor wird von hinten eingeschoben; die Welle tritt vorne durch die
+3,2-mm-Oeffnung aus. Propellerunterseite liegt mindestens 1 mm vor der
+2-mm-Frontplatte. Die freie Wellenlaenge wurde nicht angegeben: ausreichend
+Nabeneingriff und Abstand zum Halter am realen Motor pruefen!
+
+DRUCKEN
+Ausgangsvorschlag: PETG, 0,4-mm-Duese, 0,20-mm-Schichten, 3 Waende,
+4 Boden-/Deckschichten, 20-30 % Fuellung. Propeller mit hoher/100 % Fuellung.
+STLs sind bereits mit Unterkante Z=0 exportiert:
+- Schutzgitter: Gitterflaeche auf Druckbett, Mantel nach oben. Normalerweise
+  ohne Support druckbar; erstes Layer sauber kalibrieren.
+- Motorhalter: offene Motor-Rueckseite zum Bett. Stuetzen fuer die weiter oben
+  beginnende Rueckgitterflaeche und Standfuss verwenden. Keine Stuetzen in der
+  Motoraufnahme erzeugen, dort Support-Blocker setzen. Vorschau kontrollieren.
+- Propeller: Nabenunterseite zum Bett. Leichte, gut entfernbare Stuetzen unter
+  den angestellten Fluegeln; danach alle drei gleichmaessig nacharbeiten.
+
+MONTAGE UND PRUEFUNG
+1. Support vollstaendig entfernen, Kanten entgraten, alle Passungen pruefen.
+2. Motor einsetzen und gegen Wackeln sichern. Kein Klebstoff in den Motor.
+3. Propeller spannungsfrei aufsetzen, Welle hinten abstuetzen statt belasten.
+4. Von Hand drehen: kein Kontakt mit hinterem oder vorderem Gitter.
+5. Vorderes Schutzgitter ueber den umlaufenden Flansch schieben. Es muss
+   fest sitzen; bei losem Sitz nicht einschalten, sondern Passung korrigieren.
+6. Erst bei niedriger Spannung/Drehzahl unter Aufsicht testen. Bei Unwucht,
+   Vibration, Rissen oder Streifen sofort stoppen. Kein Nachweis fuer Betrieb
+   mit 14.500 rpm! Das gedruckte Gitter ist kein zertifizierter Berstschutz.
+   Nicht mit Fingern, Haaren oder Gegenstaenden an den laufenden Rotor gehen.
+   Elektrischen Anschluss durch eine fachkundige Person pruefen lassen.
+
+GEPRUEFTE EIGENSCHAFTEN
+OpenSCAD/CGAL-Export und anschliessende STL-Pruefung bestanden:
+Jede Datei enthaelt genau einen zusammenhaengenden, geschlossenen Koerper;
+keine offenen/nicht-mannigfaltigen Kanten; konsistente Dreiecksorientierung.
+Masse und Volumina stehen in Pruefbericht.json. Gesamtmodell in Einbaulage:
+ca. 96,2 mm breit x 97,1 mm hoch x 45 mm tief (unter 10 x 10 cm).
+Drei Druckteile, drei Fluegel, Motoraufnahme und zwei Kabelausgaenge vorhanden.
+Kein physischer Probedruck, keine Passprobe am Motor, keine Festigkeits-,
+Luftstrom- oder Drehzahlmessung durchgefuehrt. Die auf dem Blatt geforderten
+max. 2 Stunden Druckzeit PRO TEIL sind ohne Drucker-/Slicerprofil NICHT
+verifiziert. Vor dem Druck im Slicer kontrollieren; besonders den Halter mit
+Support. Gesamtmasse und Druckzeit sind von Material und Profil abhaengig.
+
+BEARBEITUNG
+Ventilator-B.scad ist die parametrische Quelldatei fuer OpenSCAD.
+STLs lassen sich auch einzeln in Tinkercad importieren (Einheit mm).
+Die Modellierung erfolgte in OpenSCAD, nicht in Tinkercad.
+part="holder", "rotor" oder "guard" waehlen und als STL exportieren.
+part="assembly" zeigt die vorgesehene Einbaulage. Die Einzel-STLs besitzen
+Druckausrichtungen; deshalb beim Zusammenbauen nicht einfach deckungsgleich
+uebereinanderlegen. SCAD-Parameter nur mit anschliessender Kollisions- und
+Passungspruefung aendern.
