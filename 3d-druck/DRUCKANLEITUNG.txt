@@ -1,3 +1,9 @@
+NEU: Geteilte, einfacher druckbare Motorhalter-Version im Unterordner
+Motorhalter-geteilt/. Dort ANLEITUNG.md beachten: drei Halterteile statt
+einem, zusaetzlich drei M3-Senkschrauben und Muttern sowie Klebstoff.
+Propeller und vorderes Schutzgitter bleiben unveraendert.
+Die folgende Anleitung betrifft die fruehere EINTEILIGE Halterversion.
+
 VENTILATOR – MOTORHALTER 24 MM, PROPELLER UND SCHUTZGITTER B UNVERAENDERT
 Alle STL-Koordinaten in MILLIMETERN. Beim Import NICHT automatisch vergroessern.
 
