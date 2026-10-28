@@ -1,17 +1,19 @@
-VENTILATOR – VARIANTE B (Aufgabenstellung)
+VENTILATOR – MOTORHALTER 24 MM, PROPELLER UND SCHUTZGITTER B UNVERAENDERT
 Alle STL-Koordinaten in MILLIMETERN. Beim Import NICHT automatisch vergroessern.
 
 DREI DRUCKTEILE
-1. Motorhalter-B.stl: Halter, Standfuss, Motorhuelse und hinteres Gitter integriert.
+1. Motorhalter-24mm.stl: Halter, Standfuss, Motorhuelse und hinteres Gitter integriert.
 2. Propeller-B.stl: drei um 120 Grad versetzte, geschwungene und um 18 Grad
    angestellte Fluegel; Blattlaenge etwa 33 mm; Nabe mit 2,0-mm-Durchgangsloch.
 3. Schutzgitter-B.stl: abnehmbare vordere Abdeckung mit konzentrischer Versteifung.
 
 MOTOR UND PASSUNGEN
-Ausgelegt auf Gehaeuse-Durchmesser 20 mm, Gehaeuselaenge 25 mm, Welle 2 mm.
-Das sind die Masse aus der AUFGABENSTELLUNG, nicht die abweichenden Daten oben.
-Motoraufnahme: 20,2 mm Grundbohrung; drei kleine Anpassrippen verengen lokal
-auf ca. 19,8 mm. Diese bei Bedarf vorsichtig nacharbeiten, bis der Motor satt
+Ausgelegt auf Gehaeuse-Durchmesser 24 mm, Gehaeuselaenge 30,5 mm, Welle 2 mm.
+Der Halter verwendet jetzt die technischen Motordaten oben auf dem Blatt.
+Propeller und Schutzgitter sind bytegenau unveraendert. Der 92-mm-Anschluss
+fuer das vorhandene Schutzgitter ist unveraendert.
+Motoraufnahme: 24,2 mm Grundbohrung; drei kleine Anpassrippen verengen lokal
+auf ca. 23,8 mm. Diese bei Bedarf vorsichtig nacharbeiten, bis der Motor satt
 sitzt. Kabel durch die beiden Aussparungen an der Rueckseite fuehren. Nicht
 mit Gewalt einsetzen. Die geschlitzte Huelse erlaubt etwas Nachgiebigkeit.
 Gitterflansch: 92,0 mm Aussendurchmesser, Gegenstueck 92,2 mm Innendurchmesser.
@@ -21,7 +23,7 @@ Sie muss Drehmoment uebertragen. Nur schrittweise nachreiben, wenn zu eng;
 bei lockerer Passung nicht betreiben. Auf keinen Fall auf die Motorwelle haemmern.
 Der Motor wird von hinten eingeschoben; die Welle tritt vorne durch die
 3,2-mm-Oeffnung aus. Propellerunterseite liegt mindestens 1 mm vor der
-2-mm-Frontplatte. Die freie Wellenlaenge wurde nicht angegeben: ausreichend
+2-mm-Frontplatte. Laut Motordaten ist die freie Welle ca. 11 mm lang. Ausreichend
 Nabeneingriff und Abstand zum Halter am realen Motor pruefen!
 
 DRUCKEN
@@ -53,8 +55,9 @@ GEPRUEFTE EIGENSCHAFTEN
 OpenSCAD/CGAL-Export und anschliessende STL-Pruefung bestanden:
 Jede Datei enthaelt genau einen zusammenhaengenden, geschlossenen Koerper;
 keine offenen/nicht-mannigfaltigen Kanten; konsistente Dreiecksorientierung.
-Masse und Volumina stehen in Pruefbericht.json. Gesamtmodell in Einbaulage:
-ca. 96,2 mm breit x 97,1 mm hoch x 45 mm tief (unter 10 x 10 cm).
+Neuer Motorhalter: 92 x 95 x 50,5 mm, ein geschlossener Koerper.
+Gesamtmodell in Einbaulage:
+ca. 96,2 mm breit x 97,1 mm hoch x 50,5 mm tief (unter 10 x 10 cm).
 Drei Druckteile, drei Fluegel, Motoraufnahme und zwei Kabelausgaenge vorhanden.
 Kein physischer Probedruck, keine Passprobe am Motor, keine Festigkeits-,
 Luftstrom- oder Drehzahlmessung durchgefuehrt. Die auf dem Blatt geforderten
@@ -62,12 +65,11 @@ max. 2 Stunden Druckzeit PRO TEIL sind ohne Drucker-/Slicerprofil NICHT
 verifiziert. Vor dem Druck im Slicer kontrollieren; besonders den Halter mit
 Support. Gesamtmasse und Druckzeit sind von Material und Profil abhaengig.
 
-BEARBEITUNG
-Ventilator-B.scad ist die parametrische Quelldatei fuer OpenSCAD.
-STLs lassen sich auch einzeln in Tinkercad importieren (Einheit mm).
-Die Modellierung erfolgte in OpenSCAD, nicht in Tinkercad.
-part="holder", "rotor" oder "guard" waehlen und als STL exportieren.
-part="assembly" zeigt die vorgesehene Einbaulage. Die Einzel-STLs besitzen
-Druckausrichtungen; deshalb beim Zusammenbauen nicht einfach deckungsgleich
-uebereinanderlegen. SCAD-Parameter nur mit anschliessender Kollisions- und
-Passungspruefung aendern.
+
+IMPORT IN TINKERCAD
+Motorhalter-24mm.stl mit Einheit Millimeter und Skalierung 100 % importieren.
+Den bisherigen 20-mm-Halter im Entwurf ersetzen. Propeller und Schutzgitter
+muessen nicht erneut heruntergeladen werden. Die Druckausrichtung des
+Halters verschiebt den Flansch auf Z=30,5 statt bisher Z=25. Fuer eine
+Montagevorschau den neuen Halter um 5,5 mm entlang Z zurueckversetzen;
+Propeller und Schutzgitter behalten ihre bisherige Einbauposition.
