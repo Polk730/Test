@@ -1,30 +1,52 @@
-# Latest visual correction: wall blends into Laundry
+# AKUMU — 1986 Reception
 
-The Laundry-side cover now uses the exact surrounding tile material, colour, roughness and bump texture. The south-wall segments and cover share a continuous tile grid. The cover sits flush with the normal wall face, and the gate frame, roof edge, side walls and rail ends are recessed behind it so they no longer outline the concealed opening. The view from the stair side remains open; the automatic exit and return-blocking movement logic are unchanged.
+## Implemented presentation
 
-Files changed for this correction: `src/laundry-room.js` (share the wall material and align south-wall tile coordinates), `src/basement-room.js` (matching cover and recessed stair edges), and the existing browser script (wall-view screenshot).
+The illustrated menu is replaced by a separate real-time Three.js reception scene rendered through the existing renderer and single animation loop. It contains a bevelled walnut counter, aged beige patterned wallpaper and dark panelling, faded burgundy carpet, a receding corridor with static doors, a numbered twelve-key rack, a curved rotary telephone and cord, a lathed tarnished-brass service bell, a fountain pen, a banker's lamp and a physical two-page guest register. There is no reception clock, wall logo, figure, moving key/door, secret event or new gameplay target.
 
-Current verification: standalone and production web builds passed. Final desktop Chromium route passed: washer/slide, upward walking and automatic exit, blocked Laundry re-entry, correct standing height, one-way screen orientation and no page errors. The final Laundry-side screenshot was inspected: tile rows continue across the cover with no black patch or doorway outline. Touch controls and other gameplay code were not changed; the earlier desktop/touch and 69 automated test results below belong to the preceding stair update.
+Warm desk lighting contrasts with a dim greenish corridor fixture. The corridor flickers briefly at long irregular intervals. Geometry is batched by material; only the bell and book remain articulated. One 512-pixel shadowed light is reused with cached shadows; the existing renderer's DPR limits remain. Pointer movement gives a small smoothed camera offset; reduced motion disables parallax/tracking and shortens UI transitions. Fine grain/scanlines affect the background, while controls remain sharp.
 
----
+The main title is faded ivory, with one text-only PLAY action and small selection arrows. Existing author credit remains subdued. The old menu music and illustrated flame/bird presentation are replaced by quiet filtered ventilation/tape noise, electrical hum and rare creaks. Bell/click sounds use the existing AudioContext and mixer; audio failure leaves navigation usable. There are no new narrator lines or gameplay sound changes.
 
-# Visible, exit-only basement stairs
+## Preserved flow and personalization
 
-The existing stairs now have lighter worn metal treads, pale painted nosings and more readable rails. The lower metre of the stairwell side walls is opened so the existing basement bulb can illuminate the first steps naturally. Subtle indirect fill on the treads and nosings helps retain their shape in shadow; existing Laundry fixtures stay lit so the room above is visible. No extra lamp was added.
+Normal entry remains PLAY → NORMAL/DEMO → name entry → loading → original game introduction. PLAY rings once and briefly extinguishes the lights/fades; it cannot start duplicate transitions. Mode choice remains intact, with the same mode variables and handlers.
 
-A metal return gate at the top opens automatically while the player walks up from the basement and closes after the player clears it into Laundry. It requires no interaction, code, key or puzzle. The player can no longer enter the basement through these stairs from Laundry, even while the gate is closing. The secret washer remains the entrance. The upper opening is opaque from Laundry and see-through from the stair side, so the stairs stay concealed from above while the player can see the Laundry Room on the way up.
+The original accessible text input, validation, 24-character limit and name setters are retained. The input form is projected onto the physical register page. Valid confirmation writes the name as ink on the page, folds the book closed, rings a quieter bell and invokes the unchanged game startup/preloader. Blood-wall, letter and terminal personalization keep using the existing name. The existing DEMO → PLAY FULL VERSION handoff still starts fresh NORMAL name entry.
 
-Changed game files: `src/basement-room.js` (visible stairs and automatic return gate), `src/basement-layout.js` (one-way swept movement guard), `src/main.js` (gate animation and the local movement integration). Updated the basement unit/browser tests. Room 1, Storage puzzles, wrench requirements, Laundry coffee, portraits and DEMO modules were not changed.
+ROOM 2 / TEST and ROOM 3 / TEST are hidden by default and visible only with `?debug`. Their original destinations and startup flags are unchanged. Returning to title skips the full tracking intro using a presentation-only session flag; no gameplay save behavior was introduced.
 
-Checks completed:
+## Loading and interface
+
+The existing loading screen is an aged hotel arrival document with a thin ink progress bar. Progress still comes from the original resource/preload tasks, with no fake percentage or additional loading delay. No seamless room-transition loading screen was added.
+
+Mode, guestbook, loading, pause, return/full-version and generic inspection/touch controls share restrained retro typography and spacing. The original `style.css`, including all Room 2 terminal styling, is byte-identical; the new stylesheet uses scoped overrides and leaves the in-world computer unchanged.
+
+## Files
+
+Changed: `src/main.js` (presentation hooks only), `src/menu.js` (new menu controller), `index.html` (semantic title/guestbook/document markup), `package.json` and `README.md` (current workflow/tests).
+
+New: `src/reception-scene.js`, `src/reception-audio.js`, `src/reception.css`, this report, `tests/reception-flow.mjs`, `tests/reception-presentation.mjs`, `tests/reception-preservation.mjs`, `tests/reception-preview.mjs` and the reception baseline fixture. The existing basement browser script accepts `--touch-only` for targeted regression runs. Build/export artifacts were regenerated.
+
+Backup: `/workspace/AKUMU-Before-Reception/`. The source audit confirms 94 existing source/assets files and 39 main.js functions are byte-identical, including the start/preload implementation, controls, puzzles, room transitions, basement movement and endings. No gameplay environment module or existing audio asset was modified.
+
+## Checks actually performed
 
 - Production standalone HTML and web builds passed.
 - 60 existing unit tests, four basement tests, three coffee tests and two Laundry tests passed (69 total).
-- The new movement test covers upward exit without interaction, repeated blocked entry from Laundry, fast moves and diagonal/side approaches.
-- Source-preservation audit passed: 78 earlier source/assets files and 28 unrelated main.js function bodies remain byte-identical, including original ending, mode selection and room transitions.
+- Source-preservation audit passed.
+- Desktop and emulated-touch regular menu flows passed at a nested `/games/akumu/` URL: exactly one visible PLAY, hidden debug controls, classic pointer, mode selection, one bell per activation, validation, duplicate-submit guard, two scheduled bell cues, book-close/loading sequence, original introduction, pause/return and no repeated full startup.
+- The final phone flow also passed after the portrait camera correction and both keyboard-layout simulations: a resized layout viewport and a smaller visual viewport with unchanged layout height. Input and confirmation remained visible.
+- Debug presentation checks passed: actual 3D scene/props, bounded parallax, reduced-motion behavior, both debug guestbook entries and portrait framing.
+- With AudioContext deliberately made unavailable, PLAY, mode choice and guestbook input still worked without page errors.
+- Desktop full Room 1 puzzle and physical entry into Storage passed, including hammer/barricade/key/door and name retention.
+- Desktop full Room 2 route passed: original letter/voice, all computer stages, separate box opening, carrying/restacking, wrench guard/collection, physical climb, vent, manual shaft traversal, Laundry exit/landing and models.
+- Touch basement regression passed: hidden washer, slide, upward exit, blocked Laundry re-entry, one-way surface, visible steps and one primary basement bulb.
+- Touch DEMO invitation/NORMAL handoff regression passed: live-camera silence, post-black delay, once-only invitation, button gating, fresh NORMAL guestbook entry/start and unchanged NORMAL ending. A short test audio buffer verified finish gating; no new narrator recording was added.
+- Screenshots inspected: wide reception, mode screen, guestbook, loading document, portrait menu and keyboard-adjusted page.
 
-- Final desktop Chromium route passed: washer/slide, visible stairs, automatic upward exit using actual keyboard movement, correct Laundry standing height, gate closing and blocked return using actual input.
-- One-way screen orientation checked in the browser; player-view screenshots inspected from below and from Laundry. The lower view shows the steps and upper room, while Laundry shows the opaque face.
-- Final emulated-touch Chromium route passed: washer/slide, visible stairs, automatic upward exit with the joystick, correct standing height and blocked return from Laundry. Both browser runs reported no page errors and confirmed the basement still has exactly one primary bulb.
+## Limitations
 
-Limits: no physical iPad/Safari testing or hardware FPS benchmark. This update intentionally replaces the earlier two-way stair design with an exit-only return. There is no new puzzle.
+Tests used software-rendered Chromium and emulated touch. Physical iPad/Safari, actual on-screen keyboards and ordinary school-computer frame rates were not measured; no FPS guarantee is made. The automated keyboard checks simulate both common viewport behaviors. Initial shader/asset preparation depends on the device. If sessionStorage is unavailable, the brief presentation intro can repeat on reload; gameplay still works.
+
+All runtime assets and Three.js remain embedded in the standalone HTML. No paid service, account, secret key, external font or runtime CDN is required. Existing static-hosting, CSP, WebGL2 and iframe pointer-lock requirements remain in the Atlas README. Legacy artwork/pixel-menu screenshot expectations are superseded by the reception checks.
