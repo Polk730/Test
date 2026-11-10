@@ -1,3 +1,13 @@
+# Latest correction: guestbook back cover
+
+The stationary back board previously spanned both halves of the open register, leaving its left half on the table when the front cover shut. It now sits only under the right page block, matching the closed book. The closing animation, bell timing, name input and start flow are unchanged.
+
+Changed for this fix: `src/reception-scene.js` (one board dimension/position), `tests/reception-book-cover.mjs` (targeted browser regression), and the corresponding npm test command/documentation.
+
+Verification: standalone HTML and production web builds passed. A browser check of the real closed model measured an open width of 1.09 and a closed width of 0.56 in book-local units, with no remaining left-side board. The fully closed screenshot was inspected. Real name confirmation retained Alex and reached loading without page errors. The earlier complete regression results below were not repeated for this geometry-only fix.
+
+---
+
 # AKUMU — 1986 Reception
 
 ## Implemented presentation
