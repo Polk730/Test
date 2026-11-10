@@ -1,3 +1,13 @@
+# Latest visual correction: wall blends into Laundry
+
+The Laundry-side cover now uses the exact surrounding tile material, colour, roughness and bump texture. The south-wall segments and cover share a continuous tile grid. The cover sits flush with the normal wall face, and the gate frame, roof edge, side walls and rail ends are recessed behind it so they no longer outline the concealed opening. The view from the stair side remains open; the automatic exit and return-blocking movement logic are unchanged.
+
+Files changed for this correction: `src/laundry-room.js` (share the wall material and align south-wall tile coordinates), `src/basement-room.js` (matching cover and recessed stair edges), and the existing browser script (wall-view screenshot).
+
+Current verification: standalone and production web builds passed. Final desktop Chromium route passed: washer/slide, upward walking and automatic exit, blocked Laundry re-entry, correct standing height, one-way screen orientation and no page errors. The final Laundry-side screenshot was inspected: tile rows continue across the cover with no black patch or doorway outline. Touch controls and other gameplay code were not changed; the earlier desktop/touch and 69 automated test results below belong to the preceding stair update.
+
+---
+
 # Visible, exit-only basement stairs
 
 The existing stairs now have lighter worn metal treads, pale painted nosings and more readable rails. The lower metre of the stairwell side walls is opened so the existing basement bulb can illuminate the first steps naturally. Subtle indirect fill on the treads and nosings helps retain their shape in shadow; existing Laundry fixtures stay lit so the room above is visible. No extra lamp was added.
