@@ -1,3 +1,13 @@
+# Latest correction: reception doors and wall joins
+
+The three decorative corridor doors now occupy real openings in the wallpaper and lower wood panelling. Their leaves are recessed, the knobs meet the leaves, and jambs meet the head pieces edge-to-edge instead of overlapping. Corridor wall/ceiling ends meet the reception cleanly. The room and hall carpet now meet at one boundary with continuous texture coordinates instead of two coincident floor surfaces.
+
+Changed for this correction: `src/reception-scene.js`, the targeted `tests/reception-doorway.mjs`, the npm test command and this report. No gameplay environment, route, controls, dialogue or menu flow was changed. The previous guestbook-cover fix is retained.
+
+Verification: standalone HTML and production web builds passed. Browser probes of the actual batched geometry passed for all three recessed door leaves, uncovered lower doorway sections, single frame-joint surfaces, aligned wall headers, a single carpet surface and a clear corridor entry. Before/after close-ups and the menu-wide view were inspected. The earlier complete regression results below were not repeated for this menu-geometry-only change; physical-device/FPS limitations are unchanged.
+
+---
+
 # Latest correction: guestbook back cover
 
 The stationary back board previously spanned both halves of the open register, leaving its left half on the table when the front cover shut. It now sits only under the right page block, matching the closed book. The closing animation, bell timing, name input and start flow are unchanged.
