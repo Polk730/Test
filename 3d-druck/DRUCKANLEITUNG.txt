@@ -1,3 +1,7 @@
+AKTUELL: Im Unterordner Motorhalter-geteilt/ ist 03-Standfuss.stl jetzt
+um 30 mm erhoeht. Nur den Fuss ersetzen; Gesamthoehe jetzt 129,6 mm.
+Die anderen vier Teile der geteilten Version sind unveraendert.
+
 NEU: Geteilte, einfacher druckbare Motorhalter-Version im Unterordner
 Motorhalter-geteilt/. Dort ANLEITUNG.md beachten: drei Halterteile statt
 einem, zusaetzlich drei M3-Senkschrauben und Muttern sowie Klebstoff.

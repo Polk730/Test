@@ -31,9 +31,9 @@
     "dimensions_mm": [
       58.0,
       45.0,
-      19.45
+      49.45
     ],
-    "volume_mm3": 8529.24,
+    "volume_mm3": 11769.24,
     "nonmanifold_edges": 0,
     "inconsistent_edges": 0,
     "components": 1

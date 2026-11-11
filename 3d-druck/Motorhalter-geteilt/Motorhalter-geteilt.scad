@@ -1,5 +1,6 @@
-// mm. Assembly: motor shaft +Z, front of motor at Z=0, floor Y=-51.5.
+// mm. Assembly: motor shaft +Z, front of motor at Z=0, floor Y=-81.5 with the 30 mm raised stand.
 part="assembly";
+stand_raise=30; // Extra head elevation over the original split stand (mm).
 $fn=96;
 module ring(ro,ri,h){difference(){cylinder(r=ro,h=h);translate([0,0,-.1])cylinder(r=ri,h=h+.2);}}
 module bolt_holes(z,h,countersink=false){for(a=[30,150,270])rotate([0,0,a])translate([18.5,0,z]){cylinder(d=3.2,h=h);if(countersink)translate([0,0,h-1.6])cylinder(d1=3.2,d2=6.4,h=1.61);}}
@@ -33,14 +34,15 @@ module rear_grille(){
  }
 }
 module stand(){
- translate([-29,-51.5,-25])cube([58,3,45]);
+ translate([-29,-51.5-stand_raise,-25])cube([58,3,45]);
  for(x=[-15,15]){
-  translate([x-4,-49,-7])cube([8,10,2.8]);
+  // Thicker rear pillars support the extra elevation; upper sockets unchanged.
+  translate([x-4,-49-stand_raise,-10])cube([8,10+stand_raise,5.8]);
   translate([x-4,-41.5,-7])cube([8,2.5,7]);
   translate([x-1.9,-39.05,-4])cube([3.8,7,2]);
  }
 }
 if(part=="sleeve")translate([0,0,2])rotate([180,0,0])sleeve();
 if(part=="grille")rotate([180,0,0])rear_grille();
-if(part=="stand")translate([0,0,51.5])rotate([90,0,0])stand();
+if(part=="stand")translate([0,0,51.5+stand_raise])rotate([90,0,0])stand();
 if(part=="assembly"){color("teal")sleeve();color("silver")rear_grille();color("teal")stand();}

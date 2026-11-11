@@ -10,3 +10,13 @@ Parts: 0 sleeve, 1 rear grille, 2 stand, 3 unchanged rotor, 4 unchanged front gu
 2/4: no volume intersection (touching faces permitted)
 3/4: no volume intersection (touching faces permitted)
 All dimensions mm. Hardware and physical fit untested.
+
+
+Raised stand update: head elevation increased exactly 30 mm; base lowered 30 mm in assembly coordinates.
+Raised stand / sleeve: no volume intersection (touching faces permitted)
+Raised stand / grille: no volume intersection (touching faces permitted)
+Raised stand / rotor: no volume intersection (touching faces permitted)
+Raised stand / front_guard: no volume intersection (touching faces permitted)
+The four other STL files are byte-identical. Their six pairwise checks above are retained from the previous revision.
+Overall assembled height: 129.6 mm. Front guard to table: 33.4 mm; to base top: 30.4 mm.
+No physical print, hardware fit, strength or balance tests performed.

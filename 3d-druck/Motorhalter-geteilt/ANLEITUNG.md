@@ -6,7 +6,19 @@ Halter nicht zusätzlich verwenden. Das Gesamtmodell besteht jetzt aus fünf
 Druckteilen statt drei; die ursprüngliche Drei-Teile-Vorgabe wird damit bewusst
 auf Wunsch geändert.
 
-## Die drei neuen STL-Dateien
+## Aktualisierung: Kopf um 30 mm angehoben
+
+Nur **03-Standfuss.stl** wurde geometrisch geändert. Gegenüber der vorherigen
+Version sind die Säulen 30 mm länger und am Schaft auf 5,8 mm verstärkt.
+Die oberen Steckzapfen und Aufnahmen sind unverändert. Wer bereits die
+anderen vier Teile hat, muss nur den Standfuß neu herunterladen und drucken.
+Die bisherige Vorlage des Fußes in Tinkercad ersetzen, nicht einfach skalieren.
+
+Frontgitter zur Tischfläche: nominal 33,4 mm; zur Oberseite des Fußes: 30,4 mm.
+Die Gesamthöhe steigt von 99,6 auf **129,6 mm**. Damit wird auf ausdrücklichen
+Wunsch die ursprüngliche 100-mm-Gesamthöhenvorgabe überschritten.
+
+## Die drei STL-Dateien
 
 | Datei | Funktion | Druckausrichtung |
 |---|---|---|
@@ -14,7 +26,7 @@ auf Wunsch geändert.
 | 02-Hinteres-Gitter.stl | Hinteres Gitter mit Motor- und Fußaufnahme | Ebene Gitterfront auf Druckbett, Fußaufnahmen nach oben |
 | 03-Standfuss.stl | Breite Basis mit zwei Steckzapfen | Breite Bodenfläche auf Druckbett, Zapfen nach oben |
 
-Gesamthöhe montiert ca. 99,6 mm, maximale Breite 96,2 mm.
+Gesamthöhe montiert ca. 129,6 mm, maximale Breite 96,2 mm.
 Die STLs sind bereits so ausgerichtet, Unterkante Z=0. In Tinkercad und im
 Slicer **Millimeter, 100 %** wählen. Nicht gemeinsam automatisch skalieren.
 Alle Geometrien wachsen in dieser Ausrichtung vom Bett aus; es sind keine
@@ -69,9 +81,11 @@ zugänglich.
 
 Alle drei STLs wurden mit OpenSCAD/CGAL gerendert. Der beigefügte Prüfbericht
 kontrolliert je einen geschlossenen, zusammenhängenden Körper, konsistente
-Dreiecksorientierung und Abmessungen unter 100 mm. Die zehn möglichen
-Paarungen der fünf Druckteile wurden zusätzlich in Einbaulage auf
-Volumenüberschneidungen geprüft: alle zehn ohne Volumenkollision bestanden. Berührende Montageflächen sind vorgesehen.
+Dreiecksorientierung und Abmessungen unter 100 mm. Die vier Paarungen
+des erhöhten Standfußes mit den übrigen Teilen wurden in Einbaulage erneut
+auf Volumenüberschneidungen geprüft. Die sechs Paarungen der unveränderten
+Teile wurden bei der vorherigen Revision geprüft. Ergebnisse stehen in
+Montagepruefung.txt. Berührende Montageflächen sind vorgesehen.
 Das prüft keine Drucktoleranzen, Schrauben, Klebstoff, Motor oder Verformung.
 
 Keine physische Passprobe, kein Probedruck, keine Festigkeits- oder
