@@ -2,7 +2,7 @@
   "file": "03-Standfuss.stl",
   "print_orientation": "as exported, flat base Z=0",
   "unsupported_faces_above_bed_below_45_degrees": 0,
-  "minimum_downward_surface_angle_degrees": 51.03,
+  "minimum_downward_surface_angle_degrees": null,
   "minimum_supported_angle_required_degrees": 45,
   "scope": "Geometric surface-angle check only; no slicer or physical print test."
 }

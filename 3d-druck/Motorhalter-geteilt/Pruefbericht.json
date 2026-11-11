@@ -14,26 +14,26 @@
   },
   {
     "file": "02-Hinteres-Gitter.stl",
-    "triangles": 6052,
+    "triangles": 6108,
     "dimensions_mm": [
       92.0,
       92.0,
-      6.0
+      10.5
     ],
-    "volume_mm3": 11384.22,
+    "volume_mm3": 12103.15,
     "nonmanifold_edges": 0,
     "inconsistent_edges": 0,
     "components": 1
   },
   {
     "file": "03-Standfuss.stl",
-    "triangles": 92,
+    "triangles": 76,
     "dimensions_mm": [
       58.0,
       45.0,
       49.45
     ],
-    "volume_mm3": 11625.32,
+    "volume_mm3": 11601.24,
     "nonmanifold_edges": 0,
     "inconsistent_edges": 0,
     "components": 1

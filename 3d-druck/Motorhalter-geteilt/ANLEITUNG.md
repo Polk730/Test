@@ -6,20 +6,26 @@ Halter nicht zusätzlich verwenden. Das Gesamtmodell besteht jetzt aus fünf
 Druckteilen statt drei; die ursprüngliche Drei-Teile-Vorgabe wird damit bewusst
 auf Wunsch geändert.
 
-## Aktualisierung: Kopf um 30 mm angehoben
+## Aktuelle Version: mittige Steckzapfen ohne Versatz
 
-Nur **03-Standfuss.stl** wurde geometrisch geändert. Gegenüber der vorherigen
-Version sind die Säulen 30 mm länger und am Schaft auf 5,8 mm verstärkt.
-Die oberen Steckzapfen und Aufnahmen sind unverändert.
-Die früheren rechtwinkligen Überstände unter den Zapfen wurden durch
-kontinuierliche schräge Stützen ersetzt; es gibt dort keine frei beginnenden
-waagerechten Unterseiten mehr. Wer bereits die
-anderen vier Teile hat, muss nur den Standfuß neu herunterladen und drucken.
-Die bisherige Vorlage des Fußes in Tinkercad ersetzen, nicht einfach skalieren.
+**02-Hinteres-Gitter.stl und 03-Standfuss.stl als zusammengehöriges Paar
+neu herunterladen.** Die alten Gitteraufnahmen passen nicht zu den jetzt
+mittig auf den Säulen stehenden Zapfen. Motorhülse, Propeller und vorderes
+Schutzgitter sind unverändert.
 
-Frontgitter zur Tischfläche: nominal 33,4 mm; zur Oberseite des Fußes: 30,4 mm.
-Die Gesamthöhe steigt von 99,6 auf **129,6 mm**. Damit wird auf ausdrücklichen
-Wunsch die ursprüngliche 100-mm-Gesamthöhenvorgabe überschritten.
+Jeder Zapfen steht direkt über der Mitte seiner massiven Säule. Es gibt
+keinen seitlichen Arm, keine Stufe nach außen und keinen freien 90-Grad-Absatz
+unter dem Zapfen. Die Säule hat 8 × 5,8 mm Querschnitt; der Zapfen 3,8 × 2 mm.
+Randabstände: 2,1 mm in X, 1,9 mm in der Tiefe. Beide Mittellinien liegen bei
+X=±15 mm, Z=-7,1 mm in der Einbaulage. Die Aufnahmen im hinteren Gitter
+wurden passend nach hinten verlegt und ihre Blöcke vertieft.
+
+![Vorschau der mittigen Zapfen](Standfuss-Vorschau.png)
+
+Die 30-mm-Erhöhung bleibt erhalten. Gesamthöhe **129,6 mm**; Frontgitter zur
+Tischfläche 33,4 mm, zur Oberseite des Fußes 30,4 mm. Das überschreitet wie
+beauftragt die ursprüngliche 100-mm-Gesamthöhenvorgabe. Den Fuß in Tinkercad
+ersetzen, nicht die alte Version skalieren. Klebeverbindung bleibt erforderlich.
 
 ## Die drei STL-Dateien
 
@@ -32,16 +38,12 @@ Wunsch die ursprüngliche 100-mm-Gesamthöhenvorgabe überschritten.
 Gesamthöhe montiert ca. 129,6 mm, maximale Breite 96,2 mm.
 Die STLs sind bereits so ausgerichtet, Unterkante Z=0. In Tinkercad und im
 Slicer **Millimeter, 100 %** wählen. Nicht gemeinsam automatisch skalieren.
-Alle Geometrien wachsen in dieser Ausrichtung vom Bett aus; es sind keine
-absichtlich frei in der Luft beginnenden Flächen vorhanden. Kleine Überhänge
-an Kabelöffnungen und Passrippen der Motorhülse bleiben. Der Standfuß hat
-jetzt schräge Übergänge unter den Steckzapfen. Seine nach unten gerichteten
-Flächen oberhalb des Druckbetts sind mindestens 51 Grad zur Horizontalen
-geneigt; die geometrische 45-Grad-Prüfung besteht ohne problematische Flächen.
-In der exportierten Druckausrichtung sind dort keine lokalen Stützen mehr
-vorgesehen. Das ist keine Slicer- oder Probedruckbestätigung.
-Die schrägen Übergänge ersetzen die bisherigen freien
-90-Grad-Absätze; Belastbarkeit und Halt der Klebeverbindung physisch prüfen.
+Der Fuß wächst in dieser Druckausrichtung vom flach aufliegenden Boden
+über senkrechte Säulen direkt zu den mittigen Zapfen. Die Zapfen-Grundflächen
+liegen vollständig über dem Säulenquerschnitt. Die geometrische Prüfung
+findet oberhalb des Betts keine nach unten gerichteten Überhangflächen.
+Deshalb ist für den Fuß kein Support vorgesehen. Eine Slicer-/Probedruckprüfung
+steht aus. Belastbarkeit und Halt der Klebeverbindung physisch prüfen.
 
 Ausgangsprofil: PETG, 0,4-mm-Düse, 0,2-mm-Schichten, 3 Wände, 4 Boden- und
 Deckschichten, 20–30 % Infill. Vor dem Drucken die Schichtvorschau kontrollieren.
@@ -67,7 +69,8 @@ zugänglich.
    bis der breite Flansch vorne plan aufliegt. Die drei Schraubenlöcher decken
    sich. Mit den drei M3-Senkschrauben und rückseitigen Muttern befestigen.
 3. Die zwei Fußzapfen von unten in die rückseitigen Rechteckaufnahmen schieben.
-   Zapfen 3,8 × 2 mm, Aufnahmen 4,0 × 2,2 mm. Vor dem Kleben trocken anpassen,
+   Zapfen 3,8 × 2 mm, Aufnahmen 4,0 × 2,2 mm. Neue mittige Versionen
+   von Fuß und Gitter gemeinsam verwenden. Vor dem Kleben trocken anpassen,
    dann mit geeignetem Klebstoff fixieren und vollständig aushärten lassen.
 4. Motor von hinten einsetzen und Kabel durch die Aussparungen führen.
    Motoraufnahme: 24,2 mm Grundbohrung, Länge 30,5 mm; drei Anpassrippen
@@ -89,11 +92,10 @@ zugänglich.
 
 Alle drei STLs wurden mit OpenSCAD/CGAL gerendert. Der beigefügte Prüfbericht
 kontrolliert je einen geschlossenen, zusammenhängenden Körper, konsistente
-Dreiecksorientierung und Abmessungen unter 100 mm. Die vier Paarungen
-des erhöhten Standfußes mit den übrigen Teilen wurden in Einbaulage erneut
-auf Volumenüberschneidungen geprüft. Die sechs Paarungen der unveränderten
-Teile wurden bei der vorherigen Revision geprüft. Ergebnisse stehen in
-Montagepruefung.txt. Berührende Montageflächen sind vorgesehen.
+Dreiecksorientierung und Abmessungen unter 100 mm. Die sieben Paarungen
+mit geändertem Fuß oder hinterem Gitter wurden in Einbaulage erneut auf
+Volumenüberschneidungen geprüft. Die drei Paarungen der unveränderten
+Teile behalten ihre bisherigen Ergebnisse. Details: Montagepruefung.txt. Berührende Montageflächen sind vorgesehen.
 Das prüft keine Drucktoleranzen, Schrauben, Klebstoff, Motor oder Verformung.
 
 Keine physische Passprobe, kein Probedruck, keine Festigkeits- oder

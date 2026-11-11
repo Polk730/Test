@@ -1,28 +1,14 @@
-Parts: 0 sleeve, 1 rear grille, 2 stand, 3 unchanged rotor, 4 unchanged front guard shifted 4 mm rearward.
+Centred connector revision. 0 sleeve, 1 rear grille, 2 stand, 3 rotor, 4 front guard.
 0/1: no volume intersection (touching faces permitted)
 0/2: no volume intersection (touching faces permitted)
 1/2: no volume intersection (touching faces permitted)
-0/3: no volume intersection (touching faces permitted)
 1/3: no volume intersection (touching faces permitted)
-2/3: no volume intersection (touching faces permitted)
-0/4: no volume intersection (touching faces permitted)
 1/4: no volume intersection (touching faces permitted)
+2/3: no volume intersection (touching faces permitted)
 2/4: no volume intersection (touching faces permitted)
-3/4: no volume intersection (touching faces permitted)
-All dimensions mm. Hardware and physical fit untested.
-
-
-Raised stand update: head elevation increased exactly 30 mm; base lowered 30 mm in assembly coordinates.
-Raised stand / sleeve: no volume intersection (touching faces permitted)
-Raised stand / grille: no volume intersection (touching faces permitted)
-Raised stand / rotor: no volume intersection (touching faces permitted)
-Raised stand / front_guard: no volume intersection (touching faces permitted)
-The four other STL files are byte-identical. Their six pairwise checks above are retained from the previous revision.
-Overall assembled height: 129.6 mm. Front guard to table: 33.4 mm; to base top: 30.4 mm.
-No physical print, hardware fit, strength or balance tests performed.
-
-Sloped-support revision: the square mounting-tab ledges were replaced by continuous ramps.
-All four raised stand pair checks above re-executed for this revision and passed.
-The other four STL files remain byte-identical.
-Print-angle check: minimum downward-face angle above bed 51.03 degrees; no faces below 45 degrees.
-See Druckwinkelpruefung.json. Physical strength and print performance remain untested.
+Pairs 0/3, 0/4 and 3/4 are unchanged and retain their previous passing checks.
+Sleeve, rotor and front guard byte-identical to previous revision.
+Pegs and pillars share centre lines X=+/-15, Z=-7.1 in assembly.
+Pillar footprint 8 x 5.8 mm; peg footprint 3.8 x 2 mm; socket 4 x 2.2 mm.
+Head raise remains 30 mm; overall height 129.6 mm.
+No physical print, fit, strength or dynamic balance test performed.

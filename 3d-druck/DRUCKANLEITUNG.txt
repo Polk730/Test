@@ -1,7 +1,7 @@
-AKTUELL: Im Unterordner Motorhalter-geteilt/ ist 03-Standfuss.stl jetzt
-um 30 mm erhoeht und hat Schraegen statt freier 90-Grad-Absaetze an den
-oberen Zapfen. Nur den Fuss ersetzen; Gesamthoehe jetzt 129,6 mm.
-Die anderen vier Teile der geteilten Version sind unveraendert.
+AKTUELL: Mittige Zapfen ohne seitlichen Versatz. Die beiden Dateien
+02-Hinteres-Gitter.stl und 03-Standfuss.stl aus Motorhalter-geteilt/ gemeinsam
+neu herunterladen. 30-mm-Erhoehung bleibt erhalten (gesamt 129,6 mm).
+Details und Bild in Motorhalter-geteilt/ANLEITUNG.md.
 
 NEU: Geteilte, einfacher druckbare Motorhalter-Version im Unterordner
 Motorhalter-geteilt/. Dort ANLEITUNG.md beachten: drei Halterteile statt

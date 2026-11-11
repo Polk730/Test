@@ -23,28 +23,24 @@ module rear_grille(){
    translate([0,0,-3])ring(25,14.6,3);
    for(a=[0:10:350])rotate([0,0,a])translate([24,-.75,-2])cube([20,1.5,2]);
    for(r=[29,39])translate([0,0,-2])ring(r+.75,r-.75,2);
-   for(x=[-15,15])translate([x-4,-39,-6])cube([8,8,6]);
+   for(x=[-15,15])translate([x-4,-39,-10.5])cube([8,8,10.5]);
   }
   // Sleeve pilot 29 mm in a 29.2 mm bore; flange rests on front at Z=0.
   bolt_holes(-3.1,3.2);
   // Clearance for stand shoulders, including the surrounding circular rim.
-  for(x=[-15,15])translate([x-4.1,-41.6,-7.1])cube([8.2,2.7,7.2]);
+  for(x=[-15,15])translate([x-4.1,-41.6,-10.1])cube([8.2,2.7,6]);
   // Stand sockets open at the lower edge. 3.8 x 2 mm tenons; +0.2 clearance.
-  for(x=[-15,15])translate([x-2,-39.1,-4.1])cube([4,7.3,2.2]);
+  for(x=[-15,15])translate([x-2,-39.1,-8.2])cube([4,7.3,2.2]);
  }
 }
 module stand(){
  translate([-29,-51.5-stand_raise,-25])cube([58,3,45]);
  for(x=[-15,15]){
-  // Thicker rear pillars support the extra elevation; upper sockets unchanged.
+  // Pillar and peg share X and Z centre lines: no offset, bracket or ledge.
+  // Pillar: X width 8, Z depth 5.8, centre Z=-7.1.
   translate([x-4,-49-stand_raise,-10])cube([8,10+stand_raise,5.8]);
-  // Narrow, <=45-degree outward growth in print orientation. No square ledge.
-  // The ramp stays within the existing grille relief and tab socket envelope.
-  hull(){
-   translate([x-1.9,-41.8,-7])cube([3.8,.02,2.8]);
-   translate([x-1.9,-39.08,-7])cube([3.8,.08,5]);
-  }
-  translate([x-1.9,-39.05,-4])cube([3.8,7,2]);
+  // Peg: centred on the pillar with 2.1 mm side margins and 1.9 mm depth margins.
+  translate([x-1.9,-39.05,-8.1])cube([3.8,7,2]);
  }
 }
 if(part=="sleeve")translate([0,0,2])rotate([180,0,0])sleeve();

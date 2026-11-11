@@ -1,0 +1,48 @@
+[
+  {
+    "pillar": {
+      "centre_xy_mm": [
+        -15.0,
+        7.1
+      ],
+      "size_xy_mm": [
+        8.0,
+        5.8
+      ]
+    },
+    "peg": {
+      "centre_xy_mm": [
+        -15.0,
+        7.1
+      ],
+      "size_xy_mm": [
+        3.799999999999999,
+        2.0
+      ]
+    },
+    "peg_centred_on_pillar": true
+  },
+  {
+    "pillar": {
+      "centre_xy_mm": [
+        15.0,
+        7.1
+      ],
+      "size_xy_mm": [
+        8.0,
+        5.8
+      ]
+    },
+    "peg": {
+      "centre_xy_mm": [
+        15.0,
+        7.1
+      ],
+      "size_xy_mm": [
+        3.799999999999999,
+        2.0
+      ]
+    },
+    "peg_centred_on_pillar": true
+  }
+]
