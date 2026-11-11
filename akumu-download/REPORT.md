@@ -1,3 +1,17 @@
+# Latest update: secret reception corridor
+
+Clicking the visible corridor entrance or a visible corridor door from the reception title opens the requested secret joke. Entry fades to black in 0.55 seconds (0.1 seconds for reduced motion), then shows exactly “WOW! You did it.” and “(...probably the laziest way possible.)”, with a single ivory BACK TO MAIN MENU button and selection arrow. It stays until dismissed. Back restores the existing reception/PLAY screen without reloading or starting a mode; the event is repeatable. There is no narrator line, bell, stinger, image, new puzzle or gameplay change. Existing quiet button feedback is reused.
+
+Picking uses the existing camera and Three.js raycaster against the actual visible reception meshes, plus a small world-space box aligned with the corridor opening. A nearer wall or desk occludes that target. Actual door-leaf hits are restricted to the corrected corridor door positions. There is no screen-wide invisible click region, added rendered geometry, dependency, animation loop or per-frame raycast. Listeners use the existing AbortController and are removed when the reception is disposed. Duplicate activation is blocked during the fade and while the secret is visible.
+
+Changed files: `index.html`, `src/menu.js`, `src/reception.css`, new `src/reception-corridor-pick.js`, targeted `tests/reception-corridor-pick.test.js` and `tests/reception-corridor-secret.mjs`, `package.json` test command, this report and generated distributions. `src/main.js`, reception geometry, reception audio and gameplay assets were not changed.
+
+Verification: standalone HTML and production web builds passed. Three targeted picking tests passed (opening versus wall/desk, visible/hidden occlusion, and actual corridor door). Chromium mouse and emulated touch checks passed for exact black-screen text and one button, persistent display, repeated activation, duplicate guarding, Back restoration without URL change or game start, wall/desk rejection, and visible-door activation. The door check used a held inspection camera because the normal reception view hides the right-hand door leaves. Desktop NORMAL and emulated-touch DEMO both reached the original introduction after PLAY → mode choice → guestbook → loading, retained the accepted name and produced no page errors. Both debug shortcuts still entered the guestbook and returned on desktop and touch. Desktop and touch secret-screen screenshots were visually inspected.
+
+A source-preservation audit passed: 94 previous source/assets files and 39 gameplay functions remain byte-identical. Full puzzle/room playthroughs were not repeated for this isolated menu feature. Physical iPad, Safari and hardware FPS were not tested. Older sections describe earlier updates and their own verification.
+
+---
+
 # Latest correction: signature stays in place during book closing
 
 The confirmation ink now uses the native name input's measured font, text baseline, colour, visible clipping area and horizontal scroll position rather than a separate hard-coded font/position. The HTML input is projected onto the exact 3D page surface. During confirmation, its text is replaced on the same render frame so there is no displaced or doubled signature.
