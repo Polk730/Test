@@ -1,3 +1,13 @@
+# Latest correction: signature stays in place during book closing
+
+The confirmation ink now uses the native name input's measured font, text baseline, colour, visible clipping area and horizontal scroll position rather than a separate hard-coded font/position. The HTML input is projected onto the exact 3D page surface. During confirmation, its text is replaced on the same render frame so there is no displaced or doubled signature.
+
+Changed for this correction: `src/menu.js`, `src/reception-scene.js`, `tests/reception-signature.mjs` and its npm command. Name validation, personalization, menu flow and gameplay were not changed.
+
+Verification: standalone HTML and production web builds passed. Targeted Chromium screenshot comparisons passed for desktop, phone-sized emulated touch and a long horizontally scrolled name. All four visible text bounds matched exactly before and after the handoff in every case. Real confirmation retained the accepted name and entered loading without page errors. The wider regression results below belong to the earlier updates and were not repeated for this local visual fix; physical iPad/Safari limitations remain unchanged.
+
+---
+
 # Latest correction: reception doors and wall joins
 
 The three decorative corridor doors now occupy real openings in the wallpaper and lower wood panelling. Their leaves are recessed, the knobs meet the leaves, and jambs meet the head pieces edge-to-edge instead of overlapping. Corridor wall/ceiling ends meet the reception cleanly. The room and hall carpet now meet at one boundary with continuous texture coordinates instead of two coincident floor surfaces.
