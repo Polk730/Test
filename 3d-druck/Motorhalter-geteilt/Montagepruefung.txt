@@ -20,3 +20,9 @@ Raised stand / front_guard: no volume intersection (touching faces permitted)
 The four other STL files are byte-identical. Their six pairwise checks above are retained from the previous revision.
 Overall assembled height: 129.6 mm. Front guard to table: 33.4 mm; to base top: 30.4 mm.
 No physical print, hardware fit, strength or balance tests performed.
+
+Sloped-support revision: the square mounting-tab ledges were replaced by continuous ramps.
+All four raised stand pair checks above re-executed for this revision and passed.
+The other four STL files remain byte-identical.
+Print-angle check: minimum downward-face angle above bed 51.03 degrees; no faces below 45 degrees.
+See Druckwinkelpruefung.json. Physical strength and print performance remain untested.

@@ -38,7 +38,12 @@ module stand(){
  for(x=[-15,15]){
   // Thicker rear pillars support the extra elevation; upper sockets unchanged.
   translate([x-4,-49-stand_raise,-10])cube([8,10+stand_raise,5.8]);
-  translate([x-4,-41.5,-7])cube([8,2.5,7]);
+  // Narrow, <=45-degree outward growth in print orientation. No square ledge.
+  // The ramp stays within the existing grille relief and tab socket envelope.
+  hull(){
+   translate([x-1.9,-41.8,-7])cube([3.8,.02,2.8]);
+   translate([x-1.9,-39.08,-7])cube([3.8,.08,5]);
+  }
   translate([x-1.9,-39.05,-4])cube([3.8,7,2]);
  }
 }

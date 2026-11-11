@@ -10,7 +10,10 @@ auf Wunsch geändert.
 
 Nur **03-Standfuss.stl** wurde geometrisch geändert. Gegenüber der vorherigen
 Version sind die Säulen 30 mm länger und am Schaft auf 5,8 mm verstärkt.
-Die oberen Steckzapfen und Aufnahmen sind unverändert. Wer bereits die
+Die oberen Steckzapfen und Aufnahmen sind unverändert.
+Die früheren rechtwinkligen Überstände unter den Zapfen wurden durch
+kontinuierliche schräge Stützen ersetzt; es gibt dort keine frei beginnenden
+waagerechten Unterseiten mehr. Wer bereits die
 anderen vier Teile hat, muss nur den Standfuß neu herunterladen und drucken.
 Die bisherige Vorlage des Fußes in Tinkercad ersetzen, nicht einfach skalieren.
 
@@ -31,9 +34,14 @@ Die STLs sind bereits so ausgerichtet, Unterkante Z=0. In Tinkercad und im
 Slicer **Millimeter, 100 %** wählen. Nicht gemeinsam automatisch skalieren.
 Alle Geometrien wachsen in dieser Ausrichtung vom Bett aus; es sind keine
 absichtlich frei in der Luft beginnenden Flächen vorhanden. Kleine Überhänge
-an Kabelöffnungen und Passrippen bleiben. Für die kleinen oberen Absätze
-des Standfußes lokale Stützen vorsehen. Hülse und Gitter sind für den Druck
-ohne flächige Stützen ausgelegt. Noch nicht durch Slicing oder Probedruck bestätigt.
+an Kabelöffnungen und Passrippen der Motorhülse bleiben. Der Standfuß hat
+jetzt schräge Übergänge unter den Steckzapfen. Seine nach unten gerichteten
+Flächen oberhalb des Druckbetts sind mindestens 51 Grad zur Horizontalen
+geneigt; die geometrische 45-Grad-Prüfung besteht ohne problematische Flächen.
+In der exportierten Druckausrichtung sind dort keine lokalen Stützen mehr
+vorgesehen. Das ist keine Slicer- oder Probedruckbestätigung.
+Die schrägen Übergänge ersetzen die bisherigen freien
+90-Grad-Absätze; Belastbarkeit und Halt der Klebeverbindung physisch prüfen.
 
 Ausgangsprofil: PETG, 0,4-mm-Düse, 0,2-mm-Schichten, 3 Wände, 4 Boden- und
 Deckschichten, 20–30 % Infill. Vor dem Drucken die Schichtvorschau kontrollieren.
