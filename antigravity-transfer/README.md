@@ -1,5 +1,11 @@
 # AKUMU — vollständiger Projekttransfer
 
+## Vollständige ZIP mit einem Klick
+
+[AKUMU-Antigravity-Complete.zip herunterladen (ca. 300 MB)](https://github.com/Polk730/Test/releases/download/akumu-antigravity-2026-11-12/AKUMU-Antigravity-Complete.zip)
+
+GitHub hat die vier Teile erfolgreich zusammengesetzt, ihre Prüfsummen geprüft und die vollständige ZIP als Release veröffentlicht. Diesen Download kannst du direkt entpacken; kein Zusammensetzen nötig. Die Teile unten bleiben als zusätzlicher Downloadweg erhalten.
+
 ## Aktuelles Projekt als einzelne ZIP
 
 [AKUMU-Antigravity-Current.zip herunterladen](https://raw.githubusercontent.com/Polk730/Test/akumu-download-20261110/antigravity-transfer/AKUMU-Antigravity-Current.zip)
