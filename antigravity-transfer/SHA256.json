@@ -1,0 +1,29 @@
+{
+  "complete_zip": {
+    "file": "AKUMU-Antigravity-Complete.zip",
+    "bytes": 313767307,
+    "sha256": "29690b876c9a0a827d0fde2b0a7938800ba36eea35bf9cae06216c5f3efd3ac8"
+  },
+  "parts": [
+    {
+      "file": "AKUMU-Antigravity-Complete.zip.001",
+      "bytes": 83886080,
+      "sha256": "d3424b0196a63560156470064488d5c1314eca738d2fd6cd773c18156d3af72f"
+    },
+    {
+      "file": "AKUMU-Antigravity-Complete.zip.002",
+      "bytes": 83886080,
+      "sha256": "a13e9a5af9f7a590296e84babf259a529ef85e63389292ffddcdae06f117f142"
+    },
+    {
+      "file": "AKUMU-Antigravity-Complete.zip.003",
+      "bytes": 83886080,
+      "sha256": "fca4767dd666a16d43b6afd93f7be77ae1d359b786306670d216c578c4b4097a"
+    },
+    {
+      "file": "AKUMU-Antigravity-Complete.zip.004",
+      "bytes": 62109067,
+      "sha256": "3ee79f31986a3191524228c217ddd78939928040b95655afe0bb3aaa498960d2"
+    }
+  ]
+}
