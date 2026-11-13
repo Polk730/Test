@@ -1,0 +1,20 @@
+[
+  {
+    "file": "AKUMU-Transfer-Part-1.zip",
+    "bytes": 7130045,
+    "entries": 98,
+    "sha256": "32a28ea3746eae312658b59b8e8592a9d9e6b4b88d1b3fa71966c48809e278ef"
+  },
+  {
+    "file": "AKUMU-Transfer-Part-2.zip",
+    "bytes": 251522,
+    "entries": 98,
+    "sha256": "0402d705845bada896dc9035f9c46a8d608c545bcbc95c1563b61112017e87ab"
+  },
+  {
+    "file": "AKUMU-Transfer-Part-3.zip",
+    "bytes": 6350418,
+    "entries": 81,
+    "sha256": "2c07148cf80544f39dd569a5a037663c60956fe544fcc1a5242ca8f5b3c571b0"
+  }
+]
